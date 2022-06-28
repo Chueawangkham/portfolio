@@ -11,6 +11,7 @@ class AboutMe extends StatelessWidget {
       fontWeight: FontWeight.bold,
       fontSize: 18,
     );
+    // ignore: constant_identifier_names
     const SubTitleFont = TextStyle(
       color: Color(0xff9a9a9a),
       fontWeight: FontWeight.bold,
@@ -54,6 +55,53 @@ class AboutMe extends StatelessWidget {
                     style: ContentFont,
                   ),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  '}',
+                  style: TitleFont,
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    Widget Education() {
+      return Column(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                Text(
+                  'Education  {',
+                  style: SubTitleFont,
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                  child: Text(
+                    ' Stusdy : Chanot School 2564',
+                    style: ContentFont,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                  child: Text(
+                    ' Stusdy : Nakhonphanom University 2563',
+                    style: ContentFont,
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  '}',
+                  style: TitleFont,
+                ),
               ],
             ),
           ),
@@ -65,14 +113,21 @@ class AboutMe extends StatelessWidget {
       backgroundColor: const Color(0xFF272727),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const SizedBox(
-                height: 20,
-              ),
-              Name(),
-            ],
+          child: Container(
+            //color: Colors.amber,
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(child: Name()),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(5, 10, 110, 0),
+                  child: Container(child: Education()),
+                ),
+              ],
+            ),
           ),
         ),
       ),
