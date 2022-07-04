@@ -122,6 +122,9 @@ class AboutMe extends StatelessWidget {
                   height: 20,
                 ),
                 Container(child: Name()),
+                Container(child: Name()),
+                Container(child: Name()),
+                Container(child: Name()),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(5, 10, 110, 0),
                   child: Container(child: Education()),
